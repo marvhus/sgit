@@ -52,7 +52,7 @@ def init():
     print("\n\n")
     os.system("git add $(pwd)/*")
     print("\n\n")
-    os.system("git commit -m 'inital'")
+    os.system("git commit -m 'inital' -S")
     print("\n\n")
     os.system(f"git remote add origin {url}")
     print("\n\n")
