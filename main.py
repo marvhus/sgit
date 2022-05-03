@@ -48,7 +48,7 @@ def clone():
     print("Please enter the name of the repository")
     repo = input("> ")
 
-    url = f"git@github.com:{user}/{repo}.git"
+    url = f"https://github.com/{user}/{repo}.git"
 
     print("\n\n")
     os.system(f"git clone {url}")
@@ -79,7 +79,7 @@ def init():
     print("Please enter the name of the main branch")
     mainBranch = input("> ")
 
-    url = f"git@github.com:{user}/{repo}.git"
+    url = f"https://github.com/{user}/{repo}.git"
 
     print("\n\n")
     os.system(f'git config --local user.name "{name}"')
