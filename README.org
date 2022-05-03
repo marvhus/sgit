@@ -38,7 +38,7 @@ git clone https://github.com/marvhus/sgit
 
 *** (optional) Add alias to .bashrc:
 #+BEGIN_SRC bash
-echo "alias sgit='$(pwd)/main.py'"
+echo "alias sgit='$(pwd)/main.py'" >> ~/.bashrc
 #+END_SRC
 
 *** Make it executable:
