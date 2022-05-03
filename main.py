@@ -79,7 +79,7 @@ def init():
     print("Please enter the name of the main branch")
     mainBranch = input("> ")
 
-    url = f"git@github.com:{user}/{repo}"
+    url = f"git@github.com:{user}/{repo}.git"
 
     print("\n\n")
     os.system(f'git config --local user.name "{name}"')
