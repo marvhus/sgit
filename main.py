@@ -3,14 +3,38 @@
 import os
 
 LOGO = """
-           _ _
-          (_) |
- ___  __ _ _| |_
-/ __|/ _` | | __|
-\__ \ (_| | | |_
-|___/\__, |_|\__|
-      __/ |
-     |___/
+
+
+
+
+
+
+
+
+
+                                                          7YJ.
+                                                          P@@:             ?P5.
+                                                          :^:              P@@:
+                 .~?Y555Y?!.        ^?Y55J! ~?7.     .????777.        :????B@@J?????^
+                ?#@B5YYY5G&!      ^G@@PYY5BBB@@^     .5PPP&@@:        ^PPPP#@@PPPPPP!
+               :@@G       ..     ^&@B:     J@@@^          P@&:             5@&:
+               .B@@Y!^:.         P@@~       G@@^          P@&:             5@&:
+                .75B#&&&#G?.     B@&:       5@@^          P@&:             5@&:
+                    ..^!Y@@B.    P@@~       G@@^          P@&:             P@&:
+               ..        P@@^    ^&@B:     J@@@^          P@&.             Y@@~
+               ~&B5J?7?YB@&?      ^G@@GYY5BBG@@^    :YYYYJ#@@5JYYY!        :B@&PYYYY~
+               .!J5PGGGPY!.         ^?Y55J! 5@@:    ^YYYYYYYYYYYY57          ~7JYYY5~
+                                   .       ^&@5
+                                  .BBPYJJYG@&Y.
+                                   ~7JY55Y?~.
+
+
+
+
+
+
+
+
 
 """
 
@@ -50,7 +74,7 @@ def init():
     print("\n\n")
     os.system("git init")
     print("\n\n")
-    os.system("git add $(pwd)/*")
+    os.system("git add *")
     print("\n\n")
     os.system("git commit -m 'inital' -S")
     print("\n\n")

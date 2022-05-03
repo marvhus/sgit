@@ -74,7 +74,7 @@ name of the repository, and name of the branch.
 Commads being run:
 #+BEGIN_SRC bash
 git init
-git add $(pwd)/*
+git add *
 git commit -m "initial" -S
 git remote add origin $url
 git branch -M $mainBranch
