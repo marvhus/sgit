@@ -64,6 +64,15 @@ def commit():
     print("Please enter the commit message")
     message = input("> ")
 
+    print()
+
+    print("Do you want to fetch before commiting?")
+    fetch = input("(y/N) > ")
+
+    if fetch == '':
+        print("\n\n")
+        os.system("git fetch")
+
     print("\n\n")
     os.system("git add -A")
     print("\n\n")

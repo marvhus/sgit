@@ -82,10 +82,12 @@ git branch -M $mainBranch
 
 *** Commit
 
-Here you enter the commit message.
+Here you enter the commit message. You can also optionaly fetch before commiting.
 
 Commands being run:
 #+BEGIN_SRC bash
+git fetch # optional
+
 git add -A
 git commit -m '$message' -S
 #+END_SRC
