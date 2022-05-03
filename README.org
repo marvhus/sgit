@@ -2,9 +2,9 @@
 #+description: Making git secure, because GitHub refuses to.
 
 * Overview
-** [[Why]]
-** [[How it works]]
-** [[How to use]]
+- [[Why]]
+- [[How it works]]
+- [[How to use]]
 
 * Why
 
