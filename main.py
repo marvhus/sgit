@@ -114,7 +114,7 @@ def commit():
     print("\n\n")
     os.system("git add -A")
     print("\n\n")
-    os.system(f'git commit -m '{message}' -S')
+    os.system(f'git commit -m "{message}" -S')
     print("\n\n")
 
 def push():
