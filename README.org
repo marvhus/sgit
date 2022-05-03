@@ -12,6 +12,7 @@ I made this because git isn't verry secure,
 and GitHub refuses to make it more secure.
 
 This makes pgp signed commits work on Linux, Windows, and WSL.
+Now it will be easy to do things the right way.
 
 * How it works
 
