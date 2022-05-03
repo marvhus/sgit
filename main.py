@@ -116,6 +116,5 @@ def main():
     else: # Shouldn't happen
         print("WTF did you do, this shouldn't happen!")
 
-
 if __name__ == '__main__':
     main()
