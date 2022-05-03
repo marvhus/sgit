@@ -48,14 +48,24 @@ def clone():
     print("Please enter the name of the repository")
     repo = input("> ")
 
-    url = f"git@github.com:{user}/{repo}"
+    url = f"git@github.com:{user}/{repo}.git"
 
     print("\n\n")
-    os.system(f"git clone  {url}")
+    os.system(f"git clone {url}")
     print("\n\n")
 
 def init():
 
+    print("Please enter your desired git username")
+    name = input("> ")
+    
+    print()
+    
+    print("Please enter your desired git email")
+    email = input("> ")
+    
+    print()
+  
     print("Please enter your GitHub username/organization name")
     user = input("> ")
 
@@ -72,11 +82,15 @@ def init():
     url = f"git@github.com:{user}/{repo}"
 
     print("\n\n")
+    os.system(f'git config --local user.name "{name}"')
+    print("\n\n")
+    os.system(f'git config --local user.email "{email}"')
+    print("\n\n")
     os.system("git init")
     print("\n\n")
     os.system("git add *")
     print("\n\n")
-    os.system("git commit -m 'inital' -S")
+    os.system('git commit -m "inital" -S')
     print("\n\n")
     os.system(f"git remote add origin {url}")
     print("\n\n")
@@ -100,7 +114,7 @@ def commit():
     print("\n\n")
     os.system("git add -A")
     print("\n\n")
-    os.system(f"git commit -m '{message}' -S")
+    os.system(f'git commit -m '{message}' -S')
     print("\n\n")
 
 def push():
