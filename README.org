@@ -21,10 +21,9 @@ managing a git repository a git repository,
 and while doing it, it makes git more secure.
 
 ** Note.
-This script assumes that you have github set up with ssh, and gpg/pgp.
+This script assumes that you have github set up gpg/pgp.
 If you havent here are some guides:
 - https://gist.github.com/ankurk91/c4f0e23d76ef868b139f3c28bde057fc
-- https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 * How to use
 
