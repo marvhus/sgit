@@ -50,9 +50,13 @@ def init():
     print("\n\n")
     os.system("git init")
     print("\n\n")
+    os.system("git add $(pwd)/*")
+    print("\n\n")
+    os.system("git commit -m 'inital'")
+    print("\n\n")
     os.system(f"git remote add origin {url}")
     print("\n\n")
-    os.system(f"git branch -M {mainBranch}")
+    os.system(f"git branch -m {mainBranch}")
     print("\n\n")
 
 def commit():
@@ -61,7 +65,7 @@ def commit():
     message = input("> ")
 
     print("\n\n")
-    os.system("git add $(pwd)/*")
+    os.system("git add -A")
     print("\n\n")
     os.system(f"git commit -m '{message}' -S")
     print("\n\n")
