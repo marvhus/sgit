@@ -63,7 +63,7 @@ def commit():
     print("\n\n")
     os.system("git add -A")
     print("\n\n")
-    os.system(f"git commit -m {message} -S")
+    os.system(f"git commit -m '{message}' -S")
     print("\n\n")
 
 def push():
@@ -77,7 +77,7 @@ def push():
     branch = input("> ")
 
     print("\n\n")
-    os.system(f"git pust -u {remote} {branch}")
+    os.system(f"git push -u {remote} {branch}")
     print("\n\n")
 
 def pull():

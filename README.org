@@ -1,5 +1,106 @@
-#+title: Readme
+#+title: sgit
+#+description: Making git secure, because GitHub refuses to.
 
-test
-* test
-** test
+* Overview
+** [[Why]]
+** [[How it works]]
+** [[How to use]]
+
+* Why
+
+I made this because git isn't verry secure,
+and GitHub refuses to make it more secure.
+
+* How it works
+
+It is a python script that autumates the process of
+managing a git repository a git repository,
+and while doing it, it makes git more secure.
+
+** Note.
+This script assumes that you have github set up with ssh, and gpg/pgp.
+If you havent here are some guides:
+- https://gist.github.com/ankurk91/c4f0e23d76ef868b139f3c28bde057fc
+- https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+
+* How to use
+
+** Download
+
+*** Clone the GitHub repository by using:
+#+BEGIN_SRC bash
+git clone https://github.com/marvhus/sgit
+#+END_SRC
+
+** Configure
+
+*** (optional) Add alias to .bashrc:
+#+BEGIN_SRC bash
+echo "alias sgit='$(pwd)/main.py'"
+#+END_SRC
+
+*** Make it executable:
+#+BEGIN_SRC bash
+chmod +x main.py
+#+END_SRC
+
+** Use
+
+*** Main menu
+
+Here you select what action you want to do.
+Actions:
+- Clone
+- Init
+- Commit
+- Push
+- Pull
+
+*** Clone
+
+Here you enter the name of the user/organisation,
+and the name of the repository.
+
+Commands being run:
+#+BEGIN_SRC bash
+git clone $url
+#+END_SRC
+
+*** Init
+
+Here you enter the name of the name of the user/organisation,
+name of the repository, and name of the branch.
+
+Commads being run:
+#+BEGIN_SRC bash
+git init
+git remote add origin $url
+git branch -M $mainBranch
+#+END_SRC
+
+*** Commit
+
+Here you enter the commit message.
+
+Commands being run:
+#+BEGIN_SRC bash
+git commit -m '$message' -S
+#+END_SRC
+
+*** Push
+
+Here you enter the name of the remote, and the name of the branch.
+
+Commands being run:
+#+BEGIN_SRC bash
+git push -u $origin $branch
+#+END_SRC
+
+*** Pull
+
+Here you dont need to enter anything.
+
+Commands being run:
+#+BEGIN_SRC bash
+git pull
+#+END_SRC
