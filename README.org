@@ -11,6 +11,8 @@
 I made this because git isn't verry secure,
 and GitHub refuses to make it more secure.
 
+This makes pgp signed commits work on Linux, Windows, and WSL.
+
 * How it works
 
 It is a python script that autumates the process of
