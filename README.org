@@ -84,8 +84,11 @@ Here you enter the commit message.
 
 Commands being run:
 #+BEGIN_SRC bash
+git add $(pwd)/*
 git commit -m '$message' -S
 #+END_SRC
+
+#+RESULTS:
 
 *** Push
 

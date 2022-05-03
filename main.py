@@ -61,7 +61,7 @@ def commit():
     message = input("> ")
 
     print("\n\n")
-    os.system("git add *")
+    os.system("git add $(pwd)/*")
     print("\n\n")
     os.system(f"git commit -m '{message}' -S")
     print("\n\n")
