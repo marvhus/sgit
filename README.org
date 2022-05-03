@@ -74,6 +74,8 @@ name of the repository, and name of the branch.
 Commads being run:
 #+BEGIN_SRC bash
 git init
+git add $(pwd)/*
+git commit -m "initial" -S
 git remote add origin $url
 git branch -M $mainBranch
 #+END_SRC
@@ -84,7 +86,7 @@ Here you enter the commit message.
 
 Commands being run:
 #+BEGIN_SRC bash
-git add $(pwd)/*
+git add -A
 git commit -m '$message' -S
 #+END_SRC
 
