@@ -38,8 +38,23 @@ LOGO = """
 
 """
 
-def clone():
+def config():
+    print("Please enter your desired git username")
+    name = input("> ")
 
+    print()
+
+    print("Please enter your desired git email")
+    email = input("> ")
+    
+    print("\n\n")
+    os.system(f'git config --local user.name "{name}"')
+    print("\n\n")
+    os.system(f'git config --local user.email "{email}"')
+
+def clone():
+    config()
+  
     print("Please enter the name of the user/organization that owns the GitHub repository")
     user = input("> ")
 
@@ -55,14 +70,7 @@ def clone():
     print("\n\n")
 
 def init():
-
-    print("Please enter your desired git username")
-    name = input("> ")
-    
-    print()
-    
-    print("Please enter your desired git email")
-    email = input("> ")
+    config()
     
     print()
   
@@ -80,11 +88,7 @@ def init():
     mainBranch = input("> ")
 
     url = f"https://github.com/{user}/{repo}.git"
-
-    print("\n\n")
-    os.system(f'git config --local user.name "{name}"')
-    print("\n\n")
-    os.system(f'git config --local user.email "{email}"')
+    
     print("\n\n")
     os.system("git init")
     print("\n\n")
@@ -98,7 +102,6 @@ def init():
     print("\n\n")
 
 def commit():
-
     print("Please enter the commit message")
     message = input("> ")
 
@@ -118,7 +121,6 @@ def commit():
     print("\n\n")
 
 def push():
-
     print("Please enter the name of the remote")
     remote = input("> ")
 
@@ -132,13 +134,13 @@ def push():
     print("\n\n")
 
 def pull():
-
     print("\n\n")
     os.system("git pull")
     print("\n\n")
 
 def mainMenu():
     options = [
+        "config",
         "clone",
         "init",
         "commit",
@@ -159,7 +161,8 @@ def main():
     print(LOGO)
     mode = mainMenu()
 
-    if   mode == 'clone':   clone()
+    if   mode == 'config':  config()
+    elif mode == 'clone':   clone()
     elif mode == 'init':    init()
     elif mode == 'commit':  commit()
     elif mode == 'push':    push()
