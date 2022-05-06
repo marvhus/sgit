@@ -47,13 +47,15 @@ def config():
     print("Please enter your desired git email")
     email = input("> ")
     
-    print("\n\n")
+    print("\n#-----#\n")
     os.system(f'git config --local user.name "{name}"')
-    print("\n\n")
+    print("\n#-----#\n")
     os.system(f'git config --local user.email "{email}"')
 
 def clone():
     config()
+  
+    print()
   
     print("Please enter the name of the user/organization that owns the GitHub repository")
     user = input("> ")
@@ -65,9 +67,9 @@ def clone():
 
     url = f"https://github.com/{user}/{repo}.git"
 
-    print("\n\n")
+    print("\n#-----#\n")
     os.system(f"git clone {url}")
-    print("\n\n")
+    print("\n#-----#\n")
 
 def init():
     config()
@@ -89,17 +91,17 @@ def init():
 
     url = f"https://github.com/{user}/{repo}.git"
     
-    print("\n\n")
+    print("\n#-----#\n")
     os.system("git init")
-    print("\n\n")
+    print("\n#-----#\n")
     os.system("git add *")
-    print("\n\n")
+    print("\n#-----#\n")
     os.system('git commit -m "inital" -S')
-    print("\n\n")
+    print("\n#-----#\n")
     os.system(f"git remote add origin {url}")
-    print("\n\n")
+    print("\n#-----#\n")
     os.system(f"git branch -m {mainBranch}")
-    print("\n\n")
+    print("\n#-----#\n")
 
 def commit():
     print("Please enter the commit message")
@@ -114,11 +116,11 @@ def commit():
         print("\n\n")
         os.system("git fetch")
 
-    print("\n\n")
+    print("\n#-----#\n")
     os.system("git add -A")
-    print("\n\n")
+    print("\n#-----#\n")
     os.system(f'git commit -m "{message}" -S')
-    print("\n\n")
+    print("\n#-----#\n")
 
 def push():
     print("Please enter the name of the remote")
@@ -129,14 +131,14 @@ def push():
     print("Please enter the name of the branch")
     branch = input("> ")
 
-    print("\n\n")
+    print("\n#-----#\n")
     os.system(f"git push -u {remote} {branch}")
-    print("\n\n")
+    print("\n#-----#\n")
 
 def pull():
-    print("\n\n")
+    print("\n#-----#\n")
     os.system("git pull")
-    print("\n\n")
+    print("\n#-----#\n")
 
 def mainMenu():
     options = [
